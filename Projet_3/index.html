@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script> 
+   <title>Location vélo</title>
+</head>
+
+<body>
+    <header>    
+        <div id="slider_buttons">
+            <img src="images/left-arrow.png" alt="Show the previous picture" id="left_arrow">
+            <img src="images/play.png" alt="Begin the slide show" id="play">
+            <img src="images/pause.png" alt="Stop the slide show" id="pause">
+            <img src="images/right-arrow.png" alt="Show the next picture" id="right_arrow">
+        </div>
+        <ul id="slides">
+            <li class="slide_showing"><img src="images/img11.jpg" alt="Montain in japan"></li>
+            <li class="slide"><img src="images/img22.jpg" alt="Japanese shop"></li>
+            <li class="slide"><img src="images/img33.jpg" alt="Shopping street"></li>
+            <li class ="slide"><img src="images/img44.jpg" alt="Forest in japan"></li>
+        </ul>
+    </header>
+    <section>
+        <article>
+            <div id="main_page">
+                <div id="map"></div>
+                <div id="station_details">
+                    <p>Détails de la station</p>
+                    <ul id="station_details_list">
+                        <li>Adresse : <span id="address"></span></li>
+                        <li><span id="places"></span> places</li>
+                        <li><span id="bikes"></span> vélos disponibles</li>
+                    </ul> 
+                    <form name="main_form" onsubmit="return false" action="">
+                        <input type="text" name="name" id="form_name" placeholder="Name" required>
+                        <input type="text" name="first_name" id="form_first_name" placeholder="First Name" required>
+                        <span id="submitButton">
+                            <input type ="submit" value="Réserver">
+                        </span>
+                    </form>
+                </div>
+                <div id="validate_button">
+                    <div id="check">
+                        <p>Valider</p>
+                    </div>
+                </div>    
+            </div>   
+        </article>    
+        <aside>    
+            <div id="canvas_contain">
+                <canvas id="signature" width="300" height="230"></canvas>
+            </div>
+        </aside>
+        <footer>
+            <div id="booking">
+                <ul>
+                    <li>Vélo réservé à <span id="bookingAddress"></span> par <span id="bookingName"></span>.</li>
+                    <li>Temps restant :<span id="bookingTimer"></span>.</li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+    <script src="javascript/ajax.js"></script>
+    <script src="javascript/map.js"></script>
+    <script src="javascript/diaporama.js"></script>
+    <script src="javascript/booking.js"></script>
+    <script src="javascript/form.js"></script>
+    <script src="javascript/canvas.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

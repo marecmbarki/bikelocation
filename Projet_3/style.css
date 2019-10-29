@@ -1,0 +1,348 @@
+
+ul {
+    list-style-type: none;
+}
+
+#slider_buttons {
+    position: absolute;
+    top: 400px;
+    display: flex;
+    margin: 0 37%;
+}
+
+#slider_buttons #play {
+    display: none;
+}
+
+#slider_buttons img {
+    position: relative;
+    z-index: 3;
+    margin: 0 26px;
+}
+
+#slider_buttons img:hover {
+    width: 59px;
+    height: 59px;
+}
+
+#slides {
+    position: relative;
+    height: 472px;
+    padding: 0px;
+    margin: 0 0 10px 0;
+    list-style-type: none;
+}
+
+#slides img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+
+.slide_showing {
+    opacity: 1;
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#main_page {
+    display: flex;
+    flex-direction: row;
+}
+#map {
+    height: 635px;
+    width: 50%;
+}
+
+#station_details {
+    margin-left: 5%;
+    border: outset;
+    width: 40%;
+    padding: 1%;
+
+}
+
+#station_details form {
+    display: flex;
+    flex-direction: column;
+}
+
+#station_details form input {
+    margin: 3% 0;
+}
+
+#station_details p, li {
+    font-size: 1.5em;
+}
+
+#station_details {
+    display: none;
+}
+
+#canvas_contain {
+    position: absolute;
+}
+
+#signature {
+    position: relative;
+    left: 863px;
+    bottom: 251px;
+    display: none;
+}
+
+#validate_button {
+    position: absolute;
+}
+
+#check {
+    display: none;
+}
+
+#booking {
+    display: none;
+}
+
+#booking ul {
+    text-align: center;
+}
+
+#check p {
+    color: #ffffff;
+    background: #4cbb17;
+    padding: 12px 24px;
+    position: relative;
+    top: 557px;
+    left: 752px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px #023b1c;
+}
+
+#check p:hover {
+    background: #338310;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+/*RESPONSIVE*/
+
+/*Format mobile*/
+@media screen and (max-width: 449px) {
+   
+   #slides img {
+       object-fit: fill;
+        height: 237px;
+    }
+    
+   #slides {
+       height: 232px;
+   }
+
+   #slider_buttons img {
+        margin: 1px;
+        height: 20px;
+    }
+
+    #slider_buttons img:hover {
+        height: 18px;
+        width: 18px;
+    }
+
+    
+    #slider_buttons {
+        margin-left: 1%;
+        top: 217px;
+    }
+
+    #main_page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #map {
+        width: 95%;
+        margin-bottom: 4%;
+    }
+
+    #station_details {
+        width: 95%;
+        padding: 0;
+        margin: Auto;
+    }
+
+    #station_details p {
+        text-align: center;
+    }
+
+    #station_details p, li {
+        font-size: 1em;
+    }
+
+    #station_details ul {
+        padding-left: 5%;
+    }
+
+    #station_details form input {
+        margin: 4% 5%;
+    }
+
+    #signature {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 6px 6% 60px 0;
+        width: 87%;
+    }
+
+    #submitButton {
+        margin-left: 50%;
+    }
+
+    #check p {
+        position: relative;
+        top: 1143px;   
+        left: 10px;
+        margin: 0 20px 57px;
+        z-index: 2;
+    }
+
+    #booking ul {
+        text-align: left;
+    }
+}
+
+/*Format tablette*/
+@media screen and (min-width: 450px) and (max-width: 656px) {
+
+    #main_page {
+        display: flex;
+        flex-direction: column
+    }
+   
+    #map {
+        width: 97%;
+    }
+
+    #station_details {
+        width: 97%;
+        margin: 0;
+    }
+
+    #slides img {
+        object-fit: fill;
+    }
+
+    #slides {
+        height: 287px;
+    }
+
+    #slider_buttons {
+        margin: 0 0;
+        top: 250px;
+    }
+
+    #slider_buttons img {
+        height: 40px;
+    }
+
+    #slider_buttons img:hover {
+        height: 36px;
+        width: 36px;
+    }
+
+    #signature {
+    margin-top: 5%;   
+    left: 50%;
+    top: 20px;   
+    }
+
+    #check p {
+        top: 1011px;   
+        left: 0;
+        z-index: 2;
+    }
+
+    #booking ul {
+        text-align: left;
+    }
+}
+
+/*Formats grande tablette*/
+@media screen and (min-width: 657px) and (max-width: 959px) {
+    #slides img {
+        object-fit: fill;
+    }
+
+    #slider_buttons {
+        margin: 0 0 0 4%;
+    }
+
+    #slider_buttons img{
+        margin: 0;
+        height: 42px;
+    }
+
+    #slider_buttons img:hover {
+        height: 38px;
+        width: 38px;
+    }
+
+    #signature {
+        position: static;
+    }
+
+    #check p {
+        top: 566px;
+        left: 526px;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1052px) {
+    #slider_buttons {
+        margin: 0 32%;
+    }
+
+    #signature {
+        height: 201px;
+        left: 615px;
+        bottom: 286px;
+    }
+
+    #check p {
+        left: 615px;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 1053px) and (max-width: 1279px) {
+    #signature {
+        left: 704px;
+        height: 201px;
+        bottom: 266px;
+    }
+
+    #check p {
+        left: 704px;
+        z-index: 2;
+    }
+}
